@@ -13,7 +13,7 @@ const Navbar = () => {
                     <button className=' pl-[5px] pb-[10px] pt-[5px] h-full w-[40px] border-l-[1px] flex justify-center items-center border-[rgb(204,204,204,.4)]'><FaSearch/></button>
                 </div>
                 <div>
-                    <ul className='flex ml-[32vw] sm:ml-[45vw] md:ml-0'>
+                    <ul className='flex ml-[5vw] sm:ml-[45vw] md:ml-0'>
                         <li className='relative w-[104px] flex'>
                             <div className='absolute content-[""] block h-[38px] [108px] right-[-1px] bg-[#00faf0] rounded-[6px]'></div>
                             <div className='flex items-center font-[600] text-[15px] z-10 bg-[#161722] border-2 border-solid border-[hsla(0,0%,100%,.9) rounded-[6px] flex-shrink-0 py-0 justify-center px-[14px] cursor-pointer relative w-[104px]'>
