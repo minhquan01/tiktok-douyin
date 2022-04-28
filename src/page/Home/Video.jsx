@@ -127,7 +127,7 @@ const Video = ({ data }) => {
                     {/* BackGround */}
                     <div className='h-full absolute top-0 left-0 right-0 bottom-0 object-cover '
                     style={{
-                        backgroundImage: `url(${data.imageBg})`,
+                        backgroundImage: `url(${require('../../assets/image/Home/img/' + data.imageBg + '.jpg')})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -142,7 +142,7 @@ const Video = ({ data }) => {
                         onClick={handlePlay}
                         ref={videoRef}
                         loop
-                        src={data.video}
+                        src={require('../../assets/image/Home/video/' + data.video + '.mp4')}
                         />
 
                     </div>
@@ -157,7 +157,7 @@ const Video = ({ data }) => {
                     {/* Action */}
                     <div className='absolute z-30 bottom-[30%] right-[2%] flex flex-col items-center'>
                         <div className='mb-[20px] relative'>
-                            <img className='rounded-full w-[50px] hover:scale-[1.1] transition-all cursor-pointer ' src={data.avatar} alt="" />
+                            <img className='rounded-full w-[50px] hover:scale-[1.1] transition-all cursor-pointer ' src={require('../../assets/image/Home/img/avatar/' + data.avatar + '.jpeg')} alt="" />
                             <AiOutlinePlus className='absolute bottom-[-9px] cursor-pointer text-[18px] left-0 mx-auto right-0 p-[3px] hover:scale-[1.1] transition-all align-bottom bg-[#fe2c55] rounded-full'/>
                         </div>
                         <div>

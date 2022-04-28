@@ -6,7 +6,7 @@ import { BsPauseFill } from 'react-icons/bs'
 import { HiVolumeUp } from 'react-icons/hi'
 import { useEffect, useRef, useState } from 'react'
 import useElementOnScreen from '../../components/useElementOnScreen'
-import './Follow.css'
+import '../Home/Home.css'
 
 
 
@@ -114,8 +114,7 @@ const VideoFl = ({ data }) => {
         }
     }
     
-    
-      
+
     return (
             <div
             className='relative snap-start h-[100vh] cursor-pointer'
@@ -128,7 +127,7 @@ const VideoFl = ({ data }) => {
                     {/* BackGround */}
                     <div className='h-full absolute top-0 left-0 right-0 bottom-0 object-cover '
                     style={{
-                        backgroundImage: `url(${data.imageBg})`,
+                        backgroundImage: `url(${require('../../assets/image/Follow/img/' + data.imageBg + '.jpg')})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -136,14 +135,14 @@ const VideoFl = ({ data }) => {
                         WebkitFilter: 'blur(60px)'               
                     }}>
                     </div>
-                    {/* Video */}
+                    {/* Fl */}
                     <div className='z-20 absolute top-0 w-full'>
                         <video
                         className='h-[83vh] w-screen left-0 outline-none absolute top-0 bottom-0 align-baseline p-0 m-0 box-border' 
                         onClick={handlePlay}
                         ref={videoRef}
                         loop
-                        src={data.video}
+                        src={require('../../assets/image/Follow/video/' + data.video + '.mp4')}
                         />
 
                     </div>
@@ -158,7 +157,8 @@ const VideoFl = ({ data }) => {
                     {/* Action */}
                     <div className='absolute z-30 bottom-[30%] right-[2%] flex flex-col items-center'>
                         <div className='mb-[20px] relative'>
-                            <img className='rounded-full w-[50px] hover:scale-[1.1] transition-all cursor-pointer ' src={data.avatar} alt="" />
+                            <img className='rounded-full w-[50px] hover:scale-[1.1] transition-all cursor-pointer ' src={require('../../assets/image/Follow/img/avatar/' + data.avatar + '.jpeg')} alt="" />
+                            
                         </div>
                         <div>
                             <div className='cursor-pointer my-[10px] flex flex-col items-center'>
@@ -199,8 +199,8 @@ const VideoFl = ({ data }) => {
                                     <span>{calculateTime(duration)}</span>
                                 </div>
                             </div>
-                            <div className='flex items-center'>
-                                <HiVolumeUp className='text-[30px]'/>
+                            <div className='flex items-center mr-[5px]'>
+                                <HiVolumeUp className='text-[24px] mr-[5px]'/>
                                 <input type="range" defaultValue='20' className='progressBar' onChange={changeVolume} ref={volumeRef}/>
                             </div>
                         </div>
